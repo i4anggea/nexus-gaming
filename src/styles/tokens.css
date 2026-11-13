@@ -1,0 +1,30 @@
+:root {
+  --ink: #161714;
+  --paper: #E9EAE4;
+  --muted: #85877E;
+  --line: #BFC1B6;
+  --lime: #C7FF3D;
+  --font-body: 'DM Sans',sans-serif;
+  --font-heading: 'Instrument Serif',Georgia,serif;
+  --font-tech: 'DM Mono',monospace;
+  --text-primary: var(--ink);
+  --text-secondary: #62645C;
+  --color-accent: var(--lime);
+  --radius-md: 0;
+  --radius-lg: 0;
+  --border-default: var(--line);
+  --surface-1: var(--paper);
+  --text-on-dark: #B7B9AE;
+  --text-dim: #62645C;
+  --surface-neutral: #D8DAD1;
+  --line-dark: #505249;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --container-width: 1360px;
+}

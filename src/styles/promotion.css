@@ -1,0 +1,43 @@
+.promo {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.promo-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.7fr;
+  gap: 24px;
+  align-items: center;
+  padding-block: 56px;
+}
+
+.promo .eyebrow {
+  align-self: start;
+  color: var(--ink);
+}
+
+.promo-number {
+  font: 160px/.9 var(--font-heading);
+  letter-spacing: -.07em;
+  white-space: nowrap;
+}
+
+.promo-number span { font-size: 80px; }
+
+.promo-copy {
+  border-left: 1px solid var(--ink);
+  padding: 16px 0 16px 40px;
+}
+
+.promo h2 {
+  font-size: 38px;
+  line-height: 1;
+}
+
+.promo-copy .editorial-link { margin-top: 24px; }
+
+.promo-copy small {
+  display: block;
+  font: 11px/1.6 var(--font-tech);
+  margin-top: 20px;
+}

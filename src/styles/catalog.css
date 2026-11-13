@@ -1,0 +1,250 @@
+.view {
+  padding-top: 56px;
+  padding-bottom: 96px;
+  min-height: 75vh;
+}
+
+.catalog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.catalog-heading h1 {
+  font-size: 112px;
+  margin-top: 24px;
+}
+
+.catalog-heading>p {
+  font-size: 14px;
+  margin-right: auto;
+  margin-left: 56px;
+}
+
+.catalog-code {
+  font: 11px var(--font-tech);
+  margin-bottom: 8px;
+}
+
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0,1fr);
+  gap: 48px;
+  margin-top: 32px;
+}
+
+.filter-panel {
+  align-self: start;
+  position: sticky;
+  top: 112px;
+}
+
+.filter-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.filter-title h2 {
+  font: 500 16px var(--font-body);
+  letter-spacing: 0;
+}
+
+.filter-title button {
+  padding: 0;
+  text-decoration: underline;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.filter-group {
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 20px 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.filter-group>label,.filter-group>legend {
+  font: 11px var(--font-tech);
+  color: var(--text-dim);
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.filter-group legend { float: left; }
+
+.filter-group legend+* { clear: both; }
+
+.filter-group>input,.filter-group>select { width: 100%; }
+
+input:not(.email-field input),select {
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  height: 44px;
+  padding: 0 12px;
+  font-size: 12px;
+  min-width: 0;
+}
+
+select { cursor: pointer; }
+
+select option {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+input:focus-visible,select:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.price-inputs {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 10px minmax(0,1fr);
+  align-items: end;
+  gap: 8px;
+}
+
+.price-inputs label {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.price-inputs input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 0 8px;
+}
+
+.price-inputs>span {
+  font-size: 12px;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.filter-checks label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 12px var(--font-body);
+  margin-top: 12px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.filter-checks input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--ink);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.filter-note {
+  font: 11px/1.7 var(--font-tech);
+  margin-top: 32px;
+}
+
+#price-error {
+  font-size: 11px;
+  padding-top: 12px;
+  color: var(--ink);
+}
+
+.shop-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  min-height: 44px;
+}
+
+#result-count { font: 11px var(--font-tech); }
+
+.sort-control {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sort-control label {
+  font: 11px var(--font-tech);
+  color: var(--text-dim);
+}
+
+.sort-control select {
+  height: 36px;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  padding: 0;
+  font-size: 12px;
+  max-width: 180px;
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.active-filters:empty { display: none; }
+
+.filter-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--ink);
+  padding: 6px 10px;
+  text-align: left;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.filter-chip:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.catalog-results .product-grid { gap: 32px 20px; }
+
+.catalog-results .product-name { font-size: 17px; }
+
+.catalog-results .product-info { padding-top: 16px; }
+
+.catalog-results .price { font-size: 18px; }
+
+.catalog-end {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font: 11px var(--font-tech);
+}
+
+.empty {
+  grid-column: 1/-1;
+  padding: 48px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.empty .button { margin-top: 24px; }
+
+.empty p { max-width: 500px; }
+
+.empty h3 { font: 40px var(--font-heading); }

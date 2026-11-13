@@ -1,0 +1,83 @@
+.login-form {
+  display: grid;
+  gap: 24px;
+  max-width: 560px;
+}
+
+.login-field {
+  display: grid;
+  gap: 8px;
+}
+
+.login-field label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-form .login-field input {
+  width: 100%;
+  border-color: var(--text-dim);
+}
+
+.login-form .login-hint,
+.login-form .login-error,
+.login-form .login-status {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.login-error,
+.login-status { color: var(--ink); }
+
+.login-error {
+  border-left: 2px solid var(--ink);
+  padding-left: 12px;
+}
+
+.login-form .login-field input[aria-invalid="true"] { border: 2px solid var(--ink); }
+
+.password-control {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.password-control input { flex: 1 1 200px; }
+
+.password-control button {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--ink);
+  font-size: 12px;
+}
+
+.password-control button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.login-example {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ink);
+}
+
+.login-example h3 { font: 500 16px var(--font-body); }
+
+.login-example dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 24px;
+  font-size: 14px;
+  margin-block: 16px;
+}
+
+.login-example dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.login-example code { font-family: var(--font-tech); }
+
+.login-example p { font-size: 12px; }

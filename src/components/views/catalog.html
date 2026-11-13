@@ -1,0 +1,93 @@
+<section id="tienda" class="container view" hidden>
+  <div class="catalog-heading">
+    <div>
+      <p class="eyebrow">NEX / INVENTARIO 2026</p>
+      <h1 id="catalog-title" tabindex="-1">
+        El
+        <em>catálogo.</em>
+      </h1>
+    </div>
+    <p>
+      Encuentra la pieza.
+      <br>
+      Revisa los detalles. Elige.
+    </p>
+    <span class="catalog-code">[ NX / 008 ]</span>
+  </div>
+  <div class="catalog-layout">
+    <aside class="filter-panel" aria-label="Filtros del catálogo">
+      <div class="filter-title">
+        <h2>Filtrar</h2>
+        <button id="reset-filters" type="button">Limpiar todo</button>
+      </div>
+      <div class="filter-group">
+        <label for="shop-search">01 / BUSCAR</label>
+        <input id="shop-search" type="search" placeholder="Nombre, tipo, especificación…">
+      </div>
+      <div class="filter-group">
+        <label for="category-filter">02 / CATEGORÍA</label>
+        <select id="category-filter">
+          <option value="Todos">Todas las categorías</option>
+          {{categoryOptions}}
+        </select>
+      </div>
+      <fieldset class="filter-group">
+        <legend>03 / PRECIO EN MXN</legend>
+        <div class="price-inputs">
+          <label for="price-min">
+            Desde
+            <input aria-describedby="price-error" id="price-min" type="number" min="0" step="1" placeholder="0" inputmode="numeric">
+          </label>
+          <span>—</span>
+          <label for="price-max">
+            Hasta
+            <input aria-describedby="price-error" id="price-max" type="number" min="0" step="1" placeholder="Sin límite" inputmode="numeric">
+          </label>
+        </div>
+        <p id="price-error" role="status" hidden>El precio mínimo debe ser menor o igual al máximo.</p>
+      </fieldset>
+      <fieldset class="filter-group filter-checks">
+        <legend>04 / AFINAR SELECCIÓN</legend>
+        <label>
+          <input id="offers-filter" type="checkbox">
+          <span>Solo precios especiales</span>
+        </label>
+        <label>
+          <input id="rating-filter" type="checkbox">
+          <span>Valoración de 4.8 o más</span>
+        </label>
+        <label>
+          <input id="wireless-filter" type="checkbox">
+          <span>Conexión inalámbrica</span>
+        </label>
+      </fieldset>
+      <p class="filter-note">
+        CATÁLOGO DE DEMOSTRACIÓN.
+        <br>
+        FOTOGRAFÍAS DE REFERENCIA.
+      </p>
+    </aside>
+    <div class="catalog-results">
+      <div class="shop-meta">
+        <span id="result-count" role="status" aria-live="polite">8 de 8 productos</span>
+        <div class="sort-control">
+          <label for="sort-filter">ORDEN</label>
+          <select id="sort-filter">
+            <option value="default">Selección NEXUS</option>
+            <option value="price-up">Menor precio</option>
+            <option value="price-down">Mayor precio</option>
+            <option value="rating">Mejor valorados</option>
+            <option value="name">Nombre A–Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="active-filters" id="active-filters" aria-label="Filtros activos">
+      </div>
+      <div class="product-grid" id="shop-grid">{{catalogProducts}}</div>
+      <div class="catalog-end">
+        <span>FIN DE LA SELECCIÓN.</span>
+        <button class="text-link" data-action="compare">Comparar productos ↗</button>
+      </div>
+    </div>
+  </div>
+</section>
